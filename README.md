@@ -292,19 +292,21 @@ To get the first paragraph
 To get the second paragraph
 
 	$  cat news.json |jq '.articles[1]'
-{
-  "source": {
-    "id": null,
-    "name": "Sentinelassam.com"
-  },
-  "author": "Poonam Kaur",
-  "title": "Daily Self-Weighing May Help Cut Holiday Weight Gain - The Sentinel Assam",
-  "description": "If you want to avoid adding extra kilos during holidays, engaging in daily self-weighing may help, according to a new research. Previous research has",
-  "url": "https://www.sentinelassam.com/news/daily-self-weighing-may-help-cut-holiday-weight-gain/",
-  "urlToImage": "https://cdn-30-skcir4i63ajp.netdna-ssl.com/wp-content/uploads/2019/05/Weight-Gain.jpg",
-  "publishedAt": "2019-05-24T10:31:27Z",
-  "content": "New York: If you want to avoid adding extra kilos during holidays, engaging in daily self-weighing may help, according to a new research. Previous research has shown the holiday season can lead to weight gain and that persists after end of holidays and could … [+1228 chars]"
-}
+
+		{
+		  "source": {
+		    "id": null,
+		    "name": "Sentinelassam.com"
+		  },
+		  "author": "Poonam Kaur",
+		  "title": "Daily Self-Weighing May Help Cut Holiday Weight Gain - The Sentinel Assam",
+		  "description": "If you want to avoid adding extra kilos during holidays, engaging in daily self-weighing may help, according to a new research. Previous research has",
+		  "url": "https://www.sentinelassam.com/news/daily-self-weighing-may-help-cut-holiday-weight-gain/",
+		  "urlToImage": "https://cdn-30-skcir4i63ajp.netdna-ssl.com/wp-content/uploads/2019/05/Weight-Gain.jpg",
+		  "publishedAt": "2019-05-24T10:31:27Z",
+		  "content": "New York: If you want to avoid adding extra kilos during holidays, engaging in daily self-weighing may help, according to a new research. Previous research has shown the holiday season can lead to weight gain and that persists after end of holidays and could … [+1228 chars]"
+
+		}
 
 
 
@@ -317,7 +319,17 @@ To get the author of the first paragraph
 
 To get the title of the first paragraph
 
-$ cat news.json |jq '.articles[1].title'
-"Daily Self-Weighing May Help Cut Holiday Weight Gain - The Sentinel Assam"
+	$ cat news.json |jq '.articles[1].title'
+	"Daily Self-Weighing May Help Cut Holiday Weight Gain - The Sentinel Assam"
+
+
+To get the length of different paragraphs
+
+	$ cat news.json |jq '.[] |length'
+	2
+	38
+	20
+
+To get all the titles 
 
 
