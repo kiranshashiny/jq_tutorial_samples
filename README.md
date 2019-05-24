@@ -333,3 +333,26 @@ To get the length of different paragraphs
 To get all the titles 
 
 
+		$ cat news.json |jq '.articles[].title'
+		"Arun Jaitley May Not Continue as Finance Minister in New Modi Cabinet - The Wire"
+		"Daily Self-Weighing May Help Cut Holiday Weight Gain - The Sentinel Assam"
+		"Lok Sabha Election Results 2019 WINNERS LIVE Updates: BJP makes remarkable comeback in Chhattisgarh after Assembly polls, bags seven out of 11 LS seats - Firstpost"
+		"Election Results 2019: Fallout After Congress Crash - Rash Of Resignations To Rahul Gandhi - NDTV News"
+		"Theresa May to step down as British PM on June 7 - Economic Times"
+		"Researchers find hormonal link between diet and obesity - Business Standard"
+		"Prime Minister Narendra Modi gets congratulatory message from India captain Virat Kohli - Hindustan Times"
+		"‘Kabir Singh’ first song: ‘Bekhayali’ featuring Shahid Kapoor and Kiara Advani will tug at your heartstri - Times of India"
+		"Smriti Irani Celebrates Amethi Victory in the Most ‘Game of Thrones’ Way Possible - News18"
+		"India, New Zealand seek tune-up in warm-up clash - International Cricket Council"
+		"PM Narendra Modi Biopic Reviews: Critics Call it a Hagiography, Vivek Oberoi's Acting Panned - News18"
+		"Redmi 7A announced with Snapdragon 439 and 4,000 mAh battery - GSMArena.com news - GSMArena.com"
+		"BSP biggest gainer among mahagathbandan constituents in UP - Economic Times"
+		"Lok Sabha election results: Narendra Modi, the PM who is more like a President - ​Modi ran a tight ship with firmness - Economic Times"
+		"2 Indians Among 3 Dead As 'Traffic Jam' On Everest Puts Climbers At Risk - NDTV News"
+		"Key Things To Know About SBI's Basic Savings Bank Deposit Account - NDTV News"
+		"India's Most Wanted Movie Review: Arjun Kapoor leads a manhunt in tepid thriller - India Today"
+		"Election Results 2019: A Sweet And Sour Win For DMK Chief MK Stalin - NDTV News"
+		"Katrina Kaif asks Salman Khan why he doesn’t follow her on Instagram, his answer is hilarious - Hindustan Times"
+		"Unhealthy food at work may up risk of lifestyle ailments: Study - Express Healthcare"
+		
+
