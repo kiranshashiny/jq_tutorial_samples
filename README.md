@@ -2,6 +2,7 @@
 
 Some samples and commands to parse JSON data.
 
+Let's say the data format is this as shown below :
 
 		{
 		  "status": "ok",
@@ -269,3 +270,54 @@ Some samples and commands to parse JSON data.
 		    }
 		  ]
 		}
+
+To get the first paragraph
+
+		$cat news.json|jq '.articles[0]'
+		{
+		  "source": {
+		    "id": null,
+		    "name": "Thewire.in"
+		  },
+		  "author": null,
+		  "title": "Arun Jaitley May Not Continue as Finance Minister in New Modi Cabinet - The Wire",
+		  "description": "\"He is definitely not taking the post of the finance minister simply because he is very unwell,\" one of the sources, who did not want to be named, told Reuters.",
+		  "url": "https://thewire.in/government/arun-jaitley-unlikely-to-continue-as-finance-minister-in-new-modi-cabinet",
+		  "urlToImage": "https://cdn.thewire.in/wp-content/uploads/2019/04/04115138/jaitley1_pti-800x400.jpg",
+		  "publishedAt": "2019-05-24T10:48:36Z",
+		  "content": "New Delhi: Finance Minister Arun Jaitley is unlikely to continue in his current role due to poor health as Prime Minister Narendra Modi begins his second term, according to four sources with knowledge of the matter.\r\nThe sources said that Jaitley, 66, is unli… [+2997 chars]"
+		}
+
+
+To get the second paragraph
+
+	$  cat news.json |jq '.articles[1]'
+{
+  "source": {
+    "id": null,
+    "name": "Sentinelassam.com"
+  },
+  "author": "Poonam Kaur",
+  "title": "Daily Self-Weighing May Help Cut Holiday Weight Gain - The Sentinel Assam",
+  "description": "If you want to avoid adding extra kilos during holidays, engaging in daily self-weighing may help, according to a new research. Previous research has",
+  "url": "https://www.sentinelassam.com/news/daily-self-weighing-may-help-cut-holiday-weight-gain/",
+  "urlToImage": "https://cdn-30-skcir4i63ajp.netdna-ssl.com/wp-content/uploads/2019/05/Weight-Gain.jpg",
+  "publishedAt": "2019-05-24T10:31:27Z",
+  "content": "New York: If you want to avoid adding extra kilos during holidays, engaging in daily self-weighing may help, according to a new research. Previous research has shown the holiday season can lead to weight gain and that persists after end of holidays and could … [+1228 chars]"
+}
+
+
+
+To get the author of the first paragraph
+
+
+	$ cat news.json |jq '.articles[1].author'
+	"Poonam Kaur"
+
+
+To get the title of the first paragraph
+
+$ cat news.json |jq '.articles[1].title'
+"Daily Self-Weighing May Help Cut Holiday Weight Gain - The Sentinel Assam"
+
+
